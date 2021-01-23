@@ -17,7 +17,7 @@ public class MovieGroup {
 
     public List<Movie> getListOrderRating(){
         return list.stream()
-                .filter(b->!((Float)b.getUserRating()).equals(0.0f))
+                .filter(b->!((Float)b.getUserRating()).equals(0.0f))//평점 0점 제거.
                 .sorted((a,b)->b.getUserRating()>a.getUserRating()?1:-1)
                 .collect(Collectors.toList());
     }
