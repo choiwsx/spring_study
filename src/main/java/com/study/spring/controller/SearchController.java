@@ -48,7 +48,7 @@ public class SearchController {
         return movieList;
     }
 
-
+    //10분 뒤 자료구조에서 자동 삭제를 위한 메서드.
     public void deleteMovieInMap(String query)
     {
         if(movieMap.containsKey(query))
@@ -57,7 +57,7 @@ public class SearchController {
 
 
 
-
+    //
     @PostMapping("/updateMovie")
     public void updateMovieByQuery(@RequestParam(name="q") String query)
     {
