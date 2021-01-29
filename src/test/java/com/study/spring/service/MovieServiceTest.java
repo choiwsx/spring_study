@@ -54,6 +54,8 @@ class MovieServiceTest {
 
         assertEquals(expectedTopRankingMovieTile, actualMovies.stream().findFirst().get().getTitle());
     }
+
+
     List<Movie> getStubMovies(){
         return Arrays.asList(
                 Movie.builder().title("영화1").link("http://test").userRating(9.4f).build(),
@@ -61,5 +63,8 @@ class MovieServiceTest {
                 Movie.builder().title("영화3").link("http://test").userRating(9.1f).build()
         );
     }
+
+
+
 
 }
